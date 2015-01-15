@@ -8,16 +8,17 @@
 	compliance with the license. Any of the license terms and conditions
 	can be waived if you get permission from the copyright holder.
 
-	crafted by   __ __     __
-				|__|  |--.|  |--.-----.-----.
-				|  |    < |    <|  -__|-- __|
-				|__|__|__||__|__|_____|_____|
+	crafted by
+		 __ __     __
+		|__|  |--.|  |--.-----.-----.
+		|  |    < |    <|  -__|-- __|
+		|__|__|__||__|__|_____|_____|
 
 		Copyright (c) 2013 by ikkez
 		Christian Knuth <ikkez0n3@gmail.com>
 		https://github.com/ikkez/F3-Sugar/
 
-		@version 0.7.2
+		@version 0.7.3
 		@date 08.02.2013
  **/
 
@@ -178,7 +179,7 @@ class FAL extends Magic
 	 * @param $key
 	 * @return bool
 	 */
-	public function get($key)
+	public function &get($key)
 	{
 		return ($this->exists($key)) ? $this->meta[$key] : false;
 	}
