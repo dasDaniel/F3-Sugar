@@ -153,6 +153,15 @@ class LocalFS implements FileSystem
 		}
 		return $log;
 	}
+	
+	public function dirSize($dir) {
+		$size = 0;
+		foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->path.$dir)) as $file){
+			if ($file->isFile())
+				$size+=$file->getSize();
+		}
+		return $size;
+	}
 }
 
 
