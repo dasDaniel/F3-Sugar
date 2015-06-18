@@ -29,7 +29,7 @@ If you need, you could also add simple keys:
 
 
 ```php
-$flash = \Flash::instance()
+$flash = \Flash::instance();
 $f3->set('FLASH', $flash);
 $flash->setKey('highlight','bg-success'); // with value
 $flash->setKey('show-hint'); // without returns just TRUE
